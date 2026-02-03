@@ -12,17 +12,14 @@ pipeline {
  
     stages {
 
-        stage('Checkout') {
+       stage('Checkout') {
+    steps {
+        echo 'Checking out code from Git (main branch)...'
+        git url: 'https://github.com/VinodhaRavi/Jenkins-pipeline-demo.git',
+            branch: 'main'
+    }
+}
 
-            steps {
-
-                echo "Checking out code from Git (main branch)..."
-
-                git branch: 'main', url: 'https://github.com/VinodhaRavi/Jenkins-pipeline-demo.git'
-
-            }
-
-        }
  
         stage('Run JMeter Tests') {
 
