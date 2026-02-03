@@ -23,10 +23,7 @@ pipeline {
             steps {
                 bat 'if not exist %RESULTS_DIR% mkdir %RESULTS_DIR%'
                 bat """
-                %JMETER_HOME%\\bin\\jmeter.bat -n ^
-                -t "C:\\Users\\vravi2\\Documents\\Training\\Loadrunner_Exp\\Recorded Script\\SCR02_loadrunnertips2.jmx" ^
-                -l "%RESULTS_DIR%\\results.jtl" ^
-                -e -o "%RESULTS_DIR%\\report"
+                %JMETER_HOME%\\bin\\jmeter.bat -n -t "C:\\Users\\vravi2\\Documents\\Training\\Loadrunner_Exp\\Recorded Script\\SCR02_loadrunnertips2.jmx" -l "%RESULTS_DIR%\\results.jtl" -e -o "%RESULTS_DIR%\\report"
                 """
             }
         }
