@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/VinodhaRavi/Jenkins-pipeline-demo.git',
+                    url: 'https://github.com/VinodhaRavi/Vinodha_loadrunner_exp.git',
                     credentialsId: 'github-token'
             }
         }
